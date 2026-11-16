@@ -1,0 +1,20 @@
+{
+  "version": "1.2.0",
+  "build": 2,
+  "force": true,
+  "downloadUrl": "",
+  "notes": {
+    "ar": [
+      "عوالم جديدة: بوابة بعد كل زعيم تنقلك لعالم أصعب وأجمل",
+      "الحظيرة: 5 طائرات بمميزات وعيوب وأسلحة مختلفة",
+      "قدرات اللاعب لا تتجاوز 15 ثانية",
+      "عنوان جديد بطائرة ثلاثية الأبعاد"
+    ],
+    "en": [
+      "New worlds: a portal after each boss takes you to a harder world",
+      "Hangar: 5 ships with different strengths, drawbacks and weapons",
+      "Player abilities now last at most 15 seconds",
+      "New title with a 3D plane"
+    ]
+  }
+}
