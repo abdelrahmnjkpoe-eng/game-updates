@@ -1,16 +1,14 @@
 {
-  "version": "1.1.3",
+  "version": "1.1.4",
   "build": 2,
   "force": true,
-  "downloadUrl": "https://github.com/abdelrahmnjkpoe-eng/game-updates/releases/download/v1.1.3/Stellar.Warfare.Setup.1.1.3.exe",
+  "downloadUrl": "https://github.com/abdelrahmnjkpoe-eng/game-updates/releases/download/v1.1.4/Stellar.Warfare.Setup.1.1.4.exe",
   "notes": {
     "ar": [
-      "عوالم جديدة: بوابة بعد كل زعيم تنقلك لعالم أصعب وأجمل",
-      " 5 طائرات بمميزات وعيوب وأسلحة مختلفة",
+      "تحسينات بزاياده وقت تجربه للعبه لنصف ساعه",
     ],
     "en": [
-      "New worlds: a portal after each boss takes you to a harder world",
-      "Hangar: 5 ships with different strengths, drawbacks and weapons",
+"Improvement by increasing the game's testing time to half an hour."
     ]
   }
 }
