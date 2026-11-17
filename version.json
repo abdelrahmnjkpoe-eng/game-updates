@@ -1,14 +1,14 @@
 {
-  "version": "1.1.4",
-  "build": 2,
+  "version": "1.2.1",
+  "build": 1,
   "force": true,
-  "downloadUrl": "https://github.com/abdelrahmnjkpoe-eng/game-updates/releases/download/v1.1.5/Stellar.Warfare.Setup.1.1.5.exe",
+  "downloadUrl": "https://github.com/abdelrahmnjkpoe-eng/game-updates/releases/download/v1.2.1/Stellar.Warfare.Setup.1.2.1.exe",
   "notes": {
     "ar": [
-      "تحسينات في الامان"
+      "الإصدار الجديد 1.2.1 مع مميزات وتحسينات مذهلة"
     ],
     "en": [
-      "Security improvements"
+      "New release 1.2.1 with amazing features and improvements"
     ]
   }
 }
