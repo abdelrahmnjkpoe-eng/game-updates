@@ -2,13 +2,13 @@
   "version": "1.1.4",
   "build": 2,
   "force": true,
-  "downloadUrl": "https://github.com/abdelrahmnjkpoe-eng/game-updates/releases/download/v1.1.4/Stellar.Warfare.Setup.1.1.4.exe",
+  "downloadUrl": "https://github.com/abdelrahmnjkpoe-eng/game-updates/releases/download/v1.1.5/Stellar.Warfare.Setup.1.1.5.exe",
   "notes": {
     "ar": [
-      "تحسينات بزياده وقت تجربه للجه لنصف ساعه"
+      "تحسينات في الامان"
     ],
     "en": [
-      "Improvement by increasing the game's testing time to half an hour."
+      "Security improvements"
     ]
   }
 }
