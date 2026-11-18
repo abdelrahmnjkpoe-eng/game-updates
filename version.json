@@ -1,14 +1,24 @@
 {
-  "version": "1.2.2",
-  "build": 1,
+  "version": "1.2.3",
+  "build": 4,
   "force": true,
-  "downloadUrl": "https://github.com/abdelrahmnjkpoe-eng/game-updates/releases/download/1.2.2/Stellar.Warfare.Setup.1.2.2.exe",
-  "notes": {
-    "ar": [
-      "الإصدار الجديد 1.2.2 مع مميزات وتحسينات مذهلة"
-    ],
-    "en": [
-      "New release 1.2.2 with amazing features and improvements"
-    ]
-  }
+  "downloadUrl": "https://github.com/abdelrahmnjkpoe-eng/game-updates/releases/download/1.2.3/Stellar.Warfare.Setup.1.2.3.exe",
+"notes": {
+  "ar": [
+    "رادار جديد بمسح دوّار",
+    "أعداء بشكل طائرات حربية وأقوى",
+    "زعماء مختلفين بمميزات ونقاط ضعف",
+    "3 طائرات جديدة: الحارس والنجم والشبح",
+    "كل عالم له شكل فضاء مختلف",
+    "الإعدادات داخل القائمة الجانبية + زر التحقق من التحديثات"
+  ],
+  "en": [
+    "New radar with a rotating sweep",
+    "Stronger enemies shaped like warplanes",
+    "Different bosses with strengths and weaknesses",
+    "3 new ships: Sentinel, Nova and Wraith",
+    "Every world has its own space scenery",
+    "Settings inside the side menu + Check for updates button"
+  ]
+}
 }
