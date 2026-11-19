@@ -1,0 +1,14 @@
+{
+  "name": "Stellar Warfare",
+  "short_name": "Stellar",
+  "description": "Stellar Warfare - الحرب النجمية",
+  "start_url": "./index.html",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#03020c",
+  "theme_color": "#03020c",
+  "icons": [
+    { "src": "image/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "image/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

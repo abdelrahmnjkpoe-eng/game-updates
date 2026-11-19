@@ -1,0 +1,12 @@
+الخط العربي (Cairo)
+-------------------
+اللعبة تستخدم خط Cairo للعربية. يُحمَّل تلقائياً من Google Fonts عند وجود إنترنت.
+للعمل بدون إنترنت: حمّل خط Cairo (رخصة OFL المجانية) من fonts.google.com/specimen/Cairo
+وضع الملف هنا باسم:  Cairo.ttf  (النسخة Variable أفضل).
+إن لم يوجد الخط تستخدم اللعبة خطوط النظام الجيدة (Dubai / Noto Sans Arabic / Segoe UI).
+
+Arabic font (Cairo)
+-------------------
+The game uses Cairo for Arabic. It loads from Google Fonts when online.
+For offline use, download Cairo (free OFL license) and save it here as Cairo.ttf.
+Without it, the game falls back to good system fonts.

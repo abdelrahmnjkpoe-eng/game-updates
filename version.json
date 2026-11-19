@@ -1,14 +1,17 @@
 {
-  "version": "1.2.4",
-  "build": 5,
+  "version": "1.2.5",
+  "build": 6,
   "force": true,
-  "downloadUrl": "https://github.com/abdelrahmnjkpoe-eng/game-updates/releases/download/v1.2.4/Stellar.Warfare.Setup.1.2.4.exe",
+  "downloadUrl": "https://github.com/abdelrahmnjkpoe-eng/game-updates/releases/download/v1.2.5/Stellar.Warfare.Setup.1.2.5.exe",
+  "minApp": "1.2.5",
   "notes": {
     "ar": [
-      "إصلاحات وتحسينات"
+      "إصلاح أخطاء",
+      "تحسين الأداء"
     ],
     "en": [
-      "Fixes and improvements"
+      "Bug fixes",
+      "Performance"
     ]
   }
 }
