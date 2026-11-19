@@ -1,15 +1,15 @@
 {
-  "version": "1.2.6",
-  "build": 9,
+  "version": "1.2.7",
+  "build": 10,
   "force": true,
   "downloadUrl": "https://github.com/abdelrahmnjkpoe-eng/game-updates/releases/download/v1.2.5/Stellar.Warfare.Setup.1.2.5.exe",
   "minApp": "1.2.5",
   "notes": {
     "ar": [
-      "تصغير الحظيرة تلقائياً مع حجم النافذة"
+      "فصل الواجهات عن الأزرار وزر متابعة"
     ],
     "en": [
-      "Hangar now scales with the window"
+      "Isolated UI layers and Continue button"
     ]
   }
 }
