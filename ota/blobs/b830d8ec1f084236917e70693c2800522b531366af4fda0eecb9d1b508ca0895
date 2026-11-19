@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><title>Stellar Warfare</title><link rel="shortcut icon" id="favicon" /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet" /><link rel="stylesheet" href="./style.css" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" /><meta name="theme-color" content="#03020c" /><meta name="mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-capable" content="yes" /><link rel="manifest" href="./manifest.json" /><link rel="apple-touch-icon" href="./image/icon-192.png" /></head><body><div id="salawat" style="position:fixed;inset:0;z-index:2147483600;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;cursor:default;transition:opacity 0.9s ease;-webkit-tap-highlight-color:transparent;"><div id="salawatText" dir="rtl" style="font-family:Cairo,Tahoma,sans-serif;font-weight:800;font-size:clamp(34px,8vw,84px);color:#fff;text-align:center;line-height:1.5;text-shadow:0 0 18px rgba(255,255,255,0.55),0 0 46px rgba(255,214,120,0.45);opacity:0;transition:opacity 1.6s ease;padding:0 20px;">صلى على محمد ﷺ</div><button id="salawatBtn" type="button" style="font-family:Cairo,Tahoma,sans-serif;font-weight:800;font-size:clamp(16px,3vw,22px);color:#1a1200;background:linear-gradient(180deg,#ffe08a,#e0a82e);border:0;border-radius:999px;padding:12px 46px;margin-top:10px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity 1s ease;box-shadow:0 0 22px rgba(255,214,120,0.45);">متابعة</button></div><script>
+      (function () {
+        var box = document.getElementById("salawat"),
+          txt = document.getElementById("salawatText"),
+          btn = document.getElementById("salawatBtn"),
+          audio = null,
+          done = false,
+          started = false;
+        function finish() {
+          if (done) return;
+          done = true;
+          try { if (audio) { audio.pause(); } } catch (e) {}
+          box.style.opacity = "0";
+          box.style.pointerEvents = "none";
+          setTimeout(function () { if (box.parentNode) box.parentNode.removeChild(box); }, 1000);
+        }
+        function play() {
+          if (started || done || !audio) return;
+          var p;
+          try { p = audio.play(); } catch (e) { return; }
+          started = true;
+          if (p && p.catch) p.catch(function () { started = false; }); // المتصفح منع التشغيل التلقائي: ننتظر أول ضغطة
+        }
+        try {
+          audio = new Audio("audio/stream.mp3");
+          audio.preload = "auto";
+        } catch (e) {}
+        // الشاشة لا تُغلق تلقائياً أبداً (لا عند انتهاء الصوت ولا بمهلة): زر "متابعة" فقط
+        setTimeout(function () { txt.style.opacity = "1"; }, 150);
+        setTimeout(function () {
+          btn.textContent = document.documentElement.lang === "en" ? "Continue" : "متابعة";
+          btn.style.opacity = "1";
+          btn.style.pointerEvents = "auto";
+          try { btn.focus(); } catch (e) {}
+        }, 2500);
+        play();
+        // أول ضغطة في أي مكان تشغّل الصوت لو التشغيل التلقائي ممنوع (ولا تُغلق الشاشة)
+        box.addEventListener("click", function (e) { e.stopPropagation(); if (!started && !done) play(); });
+        btn.addEventListener("click", function (e) { e.stopPropagation(); finish(); });
+        // Tab لا يطلّع التركيز على أزرار اللعبة اللي ورا الشاشة
+        window.addEventListener("keydown", function (e) { if (!done && e.key === "Tab") e.preventDefault(); }, true);
+      })();
+    </script><div id="sp" class="spinner"><canvas id="loadCanvas"></canvas></div><img src="./image/HD.jpg" style="display: none" id="img" /><img src="./image/sun.png" style="display: none" id="sun" /><div id="sideEdge" aria-hidden="true"><span class="grip"></span></div><div id="sideScrim"></div><aside id="topBar" aria-label="Menu"><button id="sideClose" type="button" tabindex="-1" aria-label="Close">✕</button><div id="sideProfile"><label id="sideAvatar" title=""><img id="sideAvatarImg" alt="" /><span id="sideAvatarFallback"></span><span class="cam" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"></path><circle cx="12" cy="13" r="3.5"></circle></svg></span><input id="avatarInput" type="file" accept="image/*" hidden /></label><div id="sideName"></div><div id="sideSub"></div><button id="avatarRemove" type="button" tabindex="-1"></button></div><div id="sideList"><button id="resumeBtn" type="button" tabindex="-1"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"></path></svg><span id="resumeLabel">Resume</span></button><button id="menuBtn" type="button" tabindex="-1"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h5v-6h4v6h5V10"></path></svg><span id="menuLabel">Main menu</span></button><button id="loginBtn" type="button" tabindex="-1" aria-label="Login"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"></path></svg><span id="loginLabel">Login</span></button><button id="dailyBtn" type="button" tabindex="-1" aria-label="Daily missions"><span class="ico" aria-hidden="true">🎯</span><span id="dailyLabel">Daily missions</span><span class="dm-dot" id="dailyDot"></span></button><button id="boardBtn" type="button" tabindex="-1" aria-label="Leaderboard"><span class="ico" aria-hidden="true">🏆</span><span id="boardLabel">Leaderboard</span></button><button id="settingsBtn" type="button" tabindex="-1" aria-label="Settings"><span class="ico" aria-hidden="true">⚙</span><span id="settingsLabel">Settings</span></button><button id="updateBtn" type="button" tabindex="-1" aria-label="Check for updates"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" id="updateIco"><path d="M20 12a8 8 0 1 1-2.6-5.9"></path><path d="M20 4v5h-5"></path></svg><span class="col"><span id="updateLabel">Check for updates</span><small id="updateStatus"></small></span></button><button id="langBtn" type="button" tabindex="-1" title="Language / اللغة" aria-label="Language / اللغة"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M2.5 12h19"></path><path d="M12 2.5c2.8 2.9 4.2 6.1 4.2 9.5s-1.4 6.6-4.2 9.5c-2.8-2.9-4.2-6.1-4.2-9.5S9.2 5.4 12 2.5z"></path></svg><span id="langCap">Language</span><span id="langLabel">عربي</span></button></div><div id="sidePage" aria-live="polite"></div></aside><div id="wrap"><div id="wrap-inner"><canvas id="cbg1"></canvas><canvas id="cbg2"></canvas><canvas id="cbg3"></canvas><canvas id="cbg4"></canvas><canvas id="cmg"></canvas><canvas id="cfg"></canvas></div></div><div id="titleSign"><div class="swing"><span class="chain l"></span><span class="chain r"></span><div class="plate"><div id="titleSparks"></div><div id="titleText"></div><a id="ghLogo" href="https://github.com/abdelrahmnjkpoe-eng" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub"><img src="./image/1.png" alt="GitHub" /></a><span class="underline"></span></div></div></div><div id="socials"><a id="socFb" href="https://www.facebook.com/ShadowKing6" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook"><img src="image/social-facebook.png" alt="Facebook" draggable="false" /></a><a id="socItch" href="https://abdelrahmn.itch.io/stellar-warfare" target="_blank" rel="noopener noreferrer" title="itch.io" aria-label="itch.io"><img src="image/social-itch.png" alt="itch.io" draggable="false" /></a></div><div id="version-text" style="position: fixed; bottom: 10px; left: 15px; color: #00ffff; font-family: 'Cairo', sans-serif; font-size: 14px; font-weight: bold; z-index: 2147483647; text-shadow: 0 0 5px rgba(0,0,0,0.8); pointer-events: none;"></div><script>
+      var $ = {};
+    </script><script src="js/version.js"></script><script src="config.js"></script><script src="js/bundle.js"></script><script>
+      window.addEventListener("DOMContentLoaded", function () {
+        var el = document.getElementById("version-text");
+        if (!el) return;
+        function put(v) { if (v) el.textContent = "v" + String(v).replace(/^v/i, ""); }
+        put(window.STELLAR_VERSION);
+        if (!window.STELLAR_VERSION && window.stellarApp && window.stellarApp.getAppVersion) {
+          try { window.stellarApp.getAppVersion().then(put).catch(function () {}); } catch (e) {}
+        }
+      });
+    </script><script>
+      if (document.fonts && document.fonts.load) {
+        ["700 16px Cairo", "800 16px Cairo", "900 24px Cairo"].forEach(function (f) {
+          document.fonts.load(f, "ابتثجحخ").catch(function () {});
+        });
+      }
+    </script><script>
+      if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) {
+        navigator.serviceWorker.register("sw.js").catch(function () {});
+      }
+    </script></body></html>
