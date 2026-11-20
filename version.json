@@ -1,6 +1,6 @@
 {
-  "version": "1.2.9",
-  "build": 12,
+  "version": "1.2.10",
+  "build": 13,
   "force": true,
   "downloadUrl": "https://github.com/abdelrahmnjkpoe-eng/game-updates/releases/download/v1.2.5/Stellar.Warfare.Setup.1.2.5.exe",
   "minApp": "1.2.5",
