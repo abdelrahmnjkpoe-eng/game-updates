@@ -1,0 +1,11 @@
+{
+  "version": "1.2.11",
+  "build": 14,
+  "force": true,
+  "downloadUrl": "https://github.com/abdelrahmnjkpoe-eng/game-updates/releases/download/v1.2.6/Stellar.Warfare.Setup.1.2.6.exe",
+  "minApp": "1.2.6",
+  "notes": {
+    "ar": ["اضافات جديده واصلاحات جديده"],
+    "en": ["New additions and fixes"]
+  }
+}
