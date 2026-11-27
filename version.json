@@ -1,12 +1,16 @@
 {
-  "version": "1.2.13",
-  "build": 16,
+  "version": "1.2.14",
+  "build": 17,
   "force": false,
   "downloadUrl": "https://github.com/abdelrahmnjkpoe-eng/game-updates/releases/download/v1.2.13/Stellar.Warfare.Setup.1.2.13.exe",
   "downloadUrlAndroid": "https://github.com/abdelrahmnjkpoe-eng/game-updates/releases/download/v1.2.13/Stellar.Warfare.Setup.1.2.13.apk",
-  "minApp": "1.2.13",
+  "minApp": "1.2.14",
   "notes": {
-    "ar": ["إضافة زعماء جدد ونيازك", "إصلاح أخطاء"],
-    "en": ["New bosses and asteroids", "Bug fixes"]
+    "ar": [
+      "إضافة زعيم جديد وطائره جديده لتحدي مع الاصدقاء وتغيرات الازرار إصلاح الأخطاء وتحديثات امان"
+    ],
+    "en": [
+      "Added a new boss and a new aircraft for challenges with friends, updated button controls, fixed bugs, and included security updates."
+    ]
   }
 }
